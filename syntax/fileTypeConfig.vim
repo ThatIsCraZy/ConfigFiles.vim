@@ -15,7 +15,6 @@ syn keyword configFileCond       to-zone from-zone match then from to match
 
 syn keyword configFileLabel      system chassis firewall security rule rule-set pool
 
-syn keyword configFileKeyword    version server class user address route nat policy vlan-id mtu
 syn keyword configFileKeyword    filter term routing-instances routing-engine line-card next-hop
 syn keyword configFileKeyword    cluster vrrp-group security-zone encapsulation storm-control
 syn keyword configFileKeyword    alg log login node zone path community
@@ -52,7 +51,6 @@ syn match   configFileVar           /\(description\)\@<=.*/
 
 
 syn keyword configFileCommandRefine   mode allowed-vlan rate peer-address except add priority-flow-control routing snooping
-syn keyword configFileProtocol mlag mlag-vip clock lacp
 syn match   configFileCommandRefine  /port type/
 
 syn keyword configFileConfigure  set delete rename insert request show
@@ -75,7 +73,7 @@ syn match   configFileVar        /\d\+/
 syn keyword configFileInterface  ethernet
 syn match   configFileInterface   /\( --> \)\@<=.*/
 
-syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
+" syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
 
 hi link configFileKeyword        Statement
 hi link configFileIpv4           NotifyTRACEIcon
