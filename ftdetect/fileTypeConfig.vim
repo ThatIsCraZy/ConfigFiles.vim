@@ -1,3 +1,3 @@
 " Vim ftdetect file
 " Language: Mellanox
-autocmd BufNewFile,BufReadPost *.mellanox set filetype=mellanox
+autocmd BufNewFile,BufReadPost *.configFile set filetype=configFile
