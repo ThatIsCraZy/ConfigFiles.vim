@@ -41,10 +41,8 @@ syn keyword configFile2ndParameter  speed ipl dcb
 syn match   configFile2ndParameter  /\([0-9]\)\@<= spanning-tree/
 
 syn match   configFileComment    / name /
-syn match   configFileVar           /\(=\)\@<=.*/
 
 syn match   configFileComment    /description/
-syn match   configFileVar           /\(description\)\@<=.*/
 
 
 
@@ -65,6 +63,9 @@ syn keyword configFileInterface  ethernet
 syn match   configFileInterface  /\v(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?) ?((\/(3[0-2]|[12][0-9]|[1-9]))(\n| ))?/ 
 
 " syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
+
+
+syn match   configFileVar           /\(=\)\@<=.*/
 
 hi link configFileKeyword        Statement
 hi link configFileIpv4           NotifyTRACEIcon
