@@ -23,7 +23,6 @@ syn match   configFileKeyword    /members\?/
 syn match   configFileKeyword    /applications\?/
 
 syn keyword configFileProtocol   ip ipv6 inet inet6 tcp udp
-syn keyword configFileProtocol   snmp snmptrap ntp syslog ssh ftp ftp-data dns sql spanning-tree
 syn match   configFileProtocol   /https\?/
 
 
@@ -39,6 +38,8 @@ syn keyword configFile2ndParameter  switchport
 syn match configFile2ndParameter   / lacp-individual /
 syn keyword configFile2ndParameter  speed ipl dcb
 syn match   configFile2ndParameter  /\([0-9]\)\@<= spanning-tree/
+
+syn match   configFileKeyword   /\( --> \?\)\@<=.*/
 
 syn match   configFileComment    / name /
 
@@ -62,7 +63,6 @@ syn keyword configFileVar        low high all
 syn keyword configFileInterface  ethernet
 syn match   configFileIpv4  /\v(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?) ?((\/(3[0-2]|[12][0-9]|[1-9]))(\n| ))?/ 
 
-" syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
 
 
 syn match   configFileVar           /\(=\)\@<=.*/
