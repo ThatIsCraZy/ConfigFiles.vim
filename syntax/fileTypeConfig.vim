@@ -8,7 +8,6 @@ endif
 setlocal iskeyword+=-
 setlocal iskeyword+=_
 
-syn match   configFileDef        /\s\u\S\+/
 
 syn keyword configFileCond       if else for-each
 syn keyword configFileCond       to-zone from-zone match then from to match
@@ -25,15 +24,13 @@ syn match   configFileKeyword    /applications\?/
 
 syn keyword configFileProtocol   ip ipv6 inet inet6 tcp udp
 syn keyword configFileProtocol   snmp snmptrap ntp syslog ssh ftp ftp-data dns sql spanning-tree
-syn match   configFileProtocol   /[ie]\?bgp/
 syn match   configFileProtocol   /https\?/
-syn match   configFileProtocol   /\s802\.3ad\s/
-syn match   configFileProtocol   /\s802\.1Q\s/
 
 
 syn match   configFileInterface   /\smlag\-[\-a-z]\+/
 
-syn keyword configFileState     any deny permit accept reject discard disable enable no 
+syn match   configFileIpv4    /\smlag\-[\-a-z]\+/
+
 syn keyword configFileState  prefer active passive on
 syn keyword configFileAction     shutdown force
 
@@ -50,8 +47,6 @@ syn match   configFileComment    /description/
 syn match   configFileVar           /\(description\)\@<=.*/
 
 
-syn keyword configFileCommandRefine   mode allowed-vlan rate peer-address except add priority-flow-control routing snooping
-syn match   configFileCommandRefine  /port type/
 
 syn keyword configFileConfigure  set delete rename insert request show
 syn keyword configFilePortType  trunk access static track standby hybrid fast edge
@@ -59,9 +54,6 @@ syn keyword configFileConfigure  link-mode port-mode  queue
 syn match   configFileConfigure  /\s\d\+[gm]/
 
 syn keyword configFileFunction   primary secondary neighbor
-syn match   configFileFunction   /unit\s[0-9]\+/
-syn match   configFileFunction   /vlan\.[0-9]\+/
-syn match   configFileFunction   /node[0-9]\+/
 
 syn region  configFileComment    contained start='/*' end='*/'
 
@@ -70,7 +62,7 @@ syn match   configFileString     /\"[^"]*\"/
 syn keyword configFileVar        low high all
 
 syn keyword configFileInterface  ethernet
-syn match   configFileInterface   /\( --> \)\@<=.*/
+syn match   configFileInterface  /\v(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?) ?((\/(3[0-2]|[12][0-9]|[1-9]))(\n| ))?/ 
 
 " syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
 
