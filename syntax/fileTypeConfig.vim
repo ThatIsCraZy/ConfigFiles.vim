@@ -1,6 +1,5 @@
 " Vim syntax file
-" Language: configFile
-" Maintainer: Makoto Momota <makoto.momota@gmail.com>
+" Language: fileTypeConfig
 
 if exists("b:current_syntax")
   finish
@@ -32,8 +31,7 @@ syn match   configFileProtocol   /https\?/
 syn match   configFileProtocol   /\s802\.3ad\s/
 syn match   configFileProtocol   /\s802\.1Q\s/
 
-" configFile mlag like follows:
-"  mlag-vig mlag-port-channel
+
 syn match   configFileInterface   /\smlag\-[\-a-z]\+/
 
 syn keyword configFileState     any deny permit accept reject discard disable enable no 
@@ -100,4 +98,4 @@ hi link configFileCommandRefine   DiagnosticHint
 
 
 
-let b:current_syntax = "configFile"
+let b:current_syntax = "fileTypeConfig"

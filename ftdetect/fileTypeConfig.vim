@@ -1,3 +1,3 @@
 " Vim ftdetect file
 " Language: configFile
-autocmd BufNewFile,BufReadPost *.config set filetype=configFile
+autocmd BufNewFile,BufReadPost *.config set filetype=fileTypeConfig
