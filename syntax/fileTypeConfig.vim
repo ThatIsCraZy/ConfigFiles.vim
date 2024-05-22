@@ -68,7 +68,6 @@ syn region  configFileComment    contained start='/*' end='*/'
 syn match   configFileString     /\"[^"]*\"/
 
 syn keyword configFileVar        low high all
-syn match   configFileVar        /\d\+/
 
 syn keyword configFileInterface  ethernet
 syn match   configFileInterface   /\( --> \)\@<=.*/
