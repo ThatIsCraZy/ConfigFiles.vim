@@ -68,7 +68,7 @@ syn match   configFileInterface  /\v(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[
 syn match   configFileVar           /\(=\)\@<=.*/
 
 hi link configFileKeyword        Statement
-hi link configFileIpv4           NotifyTRACEIcon
+hi link configFileIpv4           Type
 hi link configFilePortType           NotifyTRACEIcon
 hi link configFileProtocol       Type
 hi link configFileAction         Error
