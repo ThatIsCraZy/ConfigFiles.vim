@@ -72,8 +72,8 @@ syn match   configFileString     /\"[^"]*\"/
 syn keyword configFileVar        low high all
 syn match   configFileVar        /\d\+/
 
-syn keyword configFileInterface  ethernet timezone system-mac port-channel
-
+syn keyword configFileInterface  ethernet
+syn match   configFileInterface   \( --> \)\@<=.*/
 " IPv4
 syn match   configFileIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
 
